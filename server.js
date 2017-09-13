@@ -20,12 +20,15 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+
 app.get('/article-one', function (req, res) {
   res.send('Article one will be served');
 });
+
 app.get('/article-two', function (req, res) {
   res.send('Article 2 will be served');
 });
+
 app.get('/article-three', function (req, res) {
   res.send('Article 3 will be served');
 });
