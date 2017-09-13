@@ -20,15 +20,15 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-app.get('/ui/arcticle-one.html', function (req, res) {
+app.get('/ui/article-one.html', function (req, res) {
   res.send('Article one will be served');
 });
 
-app.get('/ui/arcticle-two.html', function (req, res) {
+app.get('/ui/article-two.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'aticle-two.html'));
 });
 
-app.get('/ui/arcticle-three.html', function (req, res) {
+app.get('/ui/article-three.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'aticle-three.html'));
 });
 
