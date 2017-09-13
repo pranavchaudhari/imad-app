@@ -5,10 +5,10 @@ console.log('Loaded!');
      );
  element.innerHTML=  'new value';
  
-  // move the image
-  var img=document.getElementById('img');
-  var marginLeft = 0;
-fuction moveRight (){
+// move the image
+var img=document.getElementById('img');
+var marginLeft = 0;
+function moveRight (){
      marginLeft = marginLeft + 1;
        img.style.marginLeft = marginLeft + 'px' ;
 }
