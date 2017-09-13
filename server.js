@@ -23,7 +23,7 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/ui/article-one.html', function (req, res) {
   res.send('Article one will be served');
 });
-app.get('/ui/article-teo.html', function (req, res) {
+app.get('/ui/article-two.html', function (req, res) {
   res.send('Article 2 will be served');
 });
 app.get('/ui/article-three.html', function (req, res) {
