@@ -30,7 +30,7 @@ app.get('/article-two', function (req, res) {
 });
 
 app.get('/article-three', function (req, res) {
-  res.sendFile(path.join(__dirname, '/', 'article-one.html'));
+  res.sendFile(path.join(__dirname, '/', 'article-three.html'));
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
