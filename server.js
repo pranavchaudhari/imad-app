@@ -9,6 +9,40 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var content ={
+    title:'Article One |Pranav',
+    date:'14 Sep 2107',
+    heading:'Article One',
+    content:` <p>
+                this is my first article.
+                 this is the content to it .
+                 now here are rubbish words for making it look big.
+                 rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish rubbish 
+                 rubbish rubbish rubbish rubbish rubbish 
+                 rubbish rubbish rubbish 
+            </p>
+        <p> this is my first paragraph</p>`
+    
+};
+    
+var htmlTemplate=`
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>
+            ${titile}
+        </title>
+        <meta name="viewport" content="width=device-width , initial-scale=1"/>
+        <link href ="/ui/style.cc" rel="stylesheet"/>
+    <body>
+    <div class="container">
+        <div>
+        <a href= "/"> Home </a>
+    </div>
+         ${content}
+    </div>
+    </body>
+</html>`
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
