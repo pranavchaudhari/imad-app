@@ -30,11 +30,14 @@ var htmlTemplate=`
 <html>
     <head>
         <title>
-            ${titile}
+            ${title}
         </title>
         <meta name="viewport" content="width=device-width , initial-scale=1"/>
         <link href ="/ui/style.cc" rel="stylesheet"/>
     <body>
+    
+    <div>${date}</div>
+    <h3>${heading}</h3>
     <div class="container">
         <div>
         <a href= "/"> Home </a>
