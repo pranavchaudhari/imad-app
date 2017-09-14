@@ -9,10 +9,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var content ={
+var articleOne ={
     title:'Article One |Pranav',
     date:'14 Sep 2107',
-    heading:'Article One',
+    heading:'Article  One',
     content:` <p>
                 this is my first article.
                  this is the content to it .
@@ -24,14 +24,14 @@ var content ={
         <p> this is my first paragraph</p>`
     
 };
-    function createTemplate(data){
-        var title = data.title;
-        var heading = data.heading;
-        var date = data.date;
-        var content = data.content;
-    }
-var htmlTemplate=`
-<!DOCTYPE html> 
+function createTemplate(data){
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+    
+    var htmlTemplate=`
+    <!DOCTYPE html> 
 <html>
     <head>
         <title>
@@ -40,9 +40,8 @@ var htmlTemplate=`
         <meta name="viewport" content="width=device-width , initial-scale=1"/>
         <link href ="/ui/style.cc" rel="stylesheet"/>
     <body>
-    
-    <div>${date}</div>
     <h3>${heading}</h3>
+    <div>${date}</div>
     <div class="container">
         <div>
         <a href= "/"> Home </a>
@@ -50,8 +49,10 @@ var htmlTemplate=`
          ${content}
     </div>
     </body>
-</html>`;
-return htmlTemplate;
+</html>
+`;
+      
+    return htmlTemplate;
 }
 
 app.get('/ui/style.css', function (req, res) {
@@ -67,7 +68,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-  res.sendFile(path.join(__dirname, '/', 'article-one.html'));
+  res.send(createTemplate(articleOne))   ;
 });
 
 app.get('/article-two', function (req, res) {
