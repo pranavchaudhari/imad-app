@@ -40,10 +40,10 @@ function createTemplate(data){
         <meta name="viewport" content="width=device-width , initial-scale=1"/>
         <link href ="/ui/style.css" rel="stylesheet"/>
     <body>
+    <div class="container">
     <h3>${heading}</h3>
     <div>${date}</div>
-    <div class="container">
-        <div>
+    <div>
         <a href= "/"> Home </a>
     </div>
          ${content}
