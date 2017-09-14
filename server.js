@@ -24,7 +24,12 @@ var content ={
         <p> this is my first paragraph</p>`
     
 };
-    
+    function createTemplate(data){
+        var title = data.title;
+        var heading = data.heading;
+        var date = data.date;
+        var content = data.content;
+    }
 var htmlTemplate=`
 <!DOCTYPE html> 
 <html>
@@ -45,7 +50,10 @@ var htmlTemplate=`
          ${content}
     </div>
     </body>
-</html>`
+</html>`;
+return htmlTemplate;
+}
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
